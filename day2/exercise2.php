@@ -1,14 +1,16 @@
 <?php
 $tab=array("kiwi","pomme","poire","litchi","rhubarbe");
 $choice="poire";
-function searchingruits($tab,$choice){
-    foreach($tab as $choice){
-        if($tab==$choice){
-            echo "Le fruit a été trouvé:".$choice
+function searchingFruits($tab,$choice){
+    foreach($tab as $value){
+        if($value == $choice){
+            return "Le fruit a été trouvé:".$choice;
         }
-        else {
-            echo "Recherche infructueuse."
-        }
+        
     }
+    
+    return "Recherche infructueuse.";
+    
 }
+echo searchingFruits($tab,$choice);
 ?>
